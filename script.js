@@ -10,6 +10,18 @@ Array.from(buttons).forEach((button)=>{
             str="";
             document.querySelector('.input').value=str;  
         }
+        else if(e.target.innerHTML=="DEL"){
+            str=str.substring(0,str.length-1);
+            document.querySelector('.input').value=str;  
+        }
+        else if(e.target.innerHTML=="("){
+            str=str+"(";
+            document.querySelector('.input').value=str;  
+        }
+        else if(e.target.innerHTML==")"){
+            str=str+")";
+            document.querySelector('.input').value=str;  
+        }
         else{
             str=str+e.target.innerHTML;
             document.querySelector('.input').value=str;  
